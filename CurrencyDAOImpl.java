@@ -12,7 +12,7 @@ public class CurrencyDAOImpl implements CurrencyDAO {
         List<Currency> list = new ArrayList<>();
 
         try (Connection conn = DBConnection.getConnection();
-             PreparedStatement ps = conn.prepareStatement("SELECT * FROM currency");
+             PreparedStatement ps = conn.prepareStatement("SELECT * FROM currencies");
              ResultSet rs = ps.executeQuery()) {
 
             while (rs.next()) {
